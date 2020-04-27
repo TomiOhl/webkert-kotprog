@@ -4,6 +4,8 @@ import { CATEGORIES } from '../category/categories';
 import { Movie } from '../movie/movie';
 import { GAMES } from '../game/games';
 import { Game } from '../game/game';
+import { MatDialog } from '@angular/material/dialog';
+import { GameAddComponent } from '../game/add/game-add.component';
 
 @Component({
   selector: 'web-home',
@@ -19,7 +21,7 @@ export class HomeComponent {
   page = '';
   detailData: any;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   onSelect(event: string) {
     this.category = event;
@@ -39,5 +41,14 @@ export class HomeComponent {
   goToDetails(event: Movie | Game) {
     this.detailData = event;
     this.page = 'details';
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(GameAddComponent, {});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result.title) {
+        this.games.push(result);
+      }
+    });
   }
 }

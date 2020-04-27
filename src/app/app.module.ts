@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -15,6 +15,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 import { NavComponent } from './nav/nav.component';
 import { MatRippleModule } from '@angular/material/core';
 import { FavoriteComponent } from './favorite/favorite.component';
@@ -23,6 +24,7 @@ import { OnHoverTwoDirective } from './directives/on-hover-two.directive';
 import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DetailsComponent } from './details/details.component';
+import { GameAddComponent } from './game/add/game-add.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +40,12 @@ import { DetailsComponent } from './details/details.component';
     LoginComponent,
     RegistrationComponent,
     DetailsComponent,
+    GameAddComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
@@ -51,7 +55,11 @@ import { DetailsComponent } from './details/details.component';
     MatRippleModule,
     MatInputModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    GameAddComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

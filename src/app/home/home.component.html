@@ -10,6 +10,9 @@
       </div>
       <div *ngSwitchCase="'game'" class="container">
         <web-game *ngFor="let game of games" [game]="game"></web-game>
+        <button mat-fab class="action-btn" (click)="openDialog()">
+          <mat-icon>add</mat-icon>
+        </button>
       </div>
       <div *ngSwitchCase="'favorite'" class="container">
         <web-favorite *ngFor="let favorite of favorites" [favorite]="favorite"></web-favorite>

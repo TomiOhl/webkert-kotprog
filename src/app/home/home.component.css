@@ -5,9 +5,17 @@
   padding: 16px;
 }
 
-web-movie, web-game, web-favorite {
+web-movie,
+web-game,
+web-favorite {
   min-width: 200px;
   flex: 1 1;
   margin: 4px;
   cursor: pointer;
+}
+
+.action-btn {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
 }
