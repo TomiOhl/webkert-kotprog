@@ -1,0 +1,31 @@
+<div [ngSwitch]="page">
+  <div *ngSwitchCase="'home'">
+    <web-nav [categories]="categories" (callSelectPage)="onSelectPage($event)" [selectedCategory]="category"
+      (callSelectC)="onSelect($event)"></web-nav>
+
+    <div [ngSwitch]="category">
+      <div *ngSwitchCase="'movie'" class="container">
+        <web-movie *ngFor="let movie of movies" [movie]="movie" (getMovie)="goToDetails($event)"
+          (callFav)="onFavorite($event)"></web-movie>
+      </div>
+      <div *ngSwitchCase="'game'" class="container">
+        <web-game *ngFor="let game of games" [game]="game"></web-game>
+      </div>
+      <div *ngSwitchCase="'favorite'" class="container">
+        <web-favorite *ngFor="let favorite of favorites" [favorite]="favorite"></web-favorite>
+      </div>
+      <div *ngSwitchDefault class="container">
+        <web-splash-screen [categories]="categories" (callSelectC)="onSelect($event)"></web-splash-screen>
+      </div>
+    </div>
+  </div>
+  <div *ngSwitchCase="'registration'">
+    <web-registration (callSelectPage)="onSelectPage($event)"></web-registration>
+  </div>
+  <div *ngSwitchCase="'details'">
+    <web-details [inData]="detailData" (callSelectPage)="onSelectPage($event)"></web-details>
+  </div>
+  <div *ngSwitchDefault>
+    <web-login (callSelectPage)="onSelectPage($event)"></web-login>
+  </div>
+</div>
