@@ -32,7 +32,7 @@ export class NavComponent implements OnInit, OnChanges {
     const category =
       this.categories.filter((item) => item.value === this.selectedCategory);
     this.sCategoryTitle =
-      category && category[0] ? category[0].title : '';
+      category && category[0] ? category[0].title : this.categories[0].title; // set selected category title or default to first one
   }
 
   select(habla: string) {
