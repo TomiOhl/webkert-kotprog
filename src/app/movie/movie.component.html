@@ -1,4 +1,4 @@
-<mat-card webOnHover (click)="getMovie.emit(movie)">
+<mat-card webOnHover="8" (click)="getMovie.emit(movie)">
   <mat-card-header>
     <mat-card-title>{{movie.title}}<small *ngIf="movie.lengthMin">({{movie.lengthMin}}p)</small></mat-card-title>
     <mat-card-subtitle>
