@@ -5,3 +5,7 @@
 a[mat-button] {
   font-size: xx-large;
 }
+
+.active {
+  margin: 100dp;
+}

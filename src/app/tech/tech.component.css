@@ -1,0 +1,16 @@
+mat-card {
+    padding: 0px;
+}
+mat-card-content {
+    display: flex;
+    align-items: center;
+}
+img {
+    display: inline-block;
+    width: 300px;
+    height: auto;
+}
+.dashboard-text {
+    display: inline-block;
+    margin: 16px;
+}

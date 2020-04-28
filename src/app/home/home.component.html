@@ -1,4 +1,4 @@
-<div [ngSwitch]="page">
+<div [ngSwitch]="page"> <!--TODO: setup routing. this should go away-->
 
   <div *ngSwitchCase="'details'">
     <web-details [inData]="detailData" (callSelectPage)="onSelectPage($event)"></web-details>
@@ -21,6 +21,9 @@
       </div>
       <div *ngSwitchCase="'favorite'" class="container">
         <web-favorite *ngFor="let favorite of favorites" [favorite]="favorite"></web-favorite>
+      </div>
+      <div *ngSwitchCase="'tech'" class="container">
+        <web-tech *ngFor="let techitem of techlist" [tech]="techitem"></web-tech>
       </div>
     </div>
 

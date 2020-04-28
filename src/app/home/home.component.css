@@ -7,9 +7,9 @@
 
 web-movie,
 web-game,
-web-favorite {
-  min-width: 200px;
-  flex: 1 1;
+web-favorite,
+web-tech {
+  width: 75%;
   margin: 4px;
   cursor: pointer;
 }

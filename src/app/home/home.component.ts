@@ -6,6 +6,7 @@ import { GAMES } from '../game/games';
 import { Game } from '../game/game';
 import { MatDialog } from '@angular/material/dialog';
 import { GameAddComponent } from '../game/add/game-add.component';
+import { TECHLIST } from '../tech/techlist';
 
 @Component({
   selector: 'web-home',
@@ -16,6 +17,7 @@ export class HomeComponent {
   categories = CATEGORIES;
   movies = MOVIES;
   games = GAMES;
+  techlist = TECHLIST;
   favorites = [];
   category = '';
   page = '';

@@ -21,6 +21,7 @@ import { GameComponent } from './game/game.component';
 import { DetailsComponent } from './details/details.component';
 import { GameAddComponent } from './game/add/game-add.component';
 import { OnHoverDirective } from './directives/on-hover.directive';
+import { TechComponent } from './tech/tech.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { OnHoverDirective } from './directives/on-hover.directive';
     GameComponent,
     DetailsComponent,
     GameAddComponent,
+    TechComponent
   ],
   imports: [
     BrowserModule,
