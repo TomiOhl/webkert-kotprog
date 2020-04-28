@@ -1,5 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Game } from './game';
+import { Component } from '@angular/core';
+import { GAMES } from './games';
+import { GameAddComponent } from './add/game-add.component';
+import { MatDialog } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'web-game',
@@ -7,8 +10,18 @@ import { Game } from './game';
   styleUrls: ['./game.component.css']
 })
 export class GameComponent {
-  @Input() game: Game;
+  games = GAMES;
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
+
+
+  openDialog() {
+    const dialogRef = this.dialog.open(GameAddComponent, {});
+    dialogRef.afterClosed().subscribe(result => {
+      if (result && result.title) {
+        this.games.push(result);
+      }
+    });
+  }
 
 }

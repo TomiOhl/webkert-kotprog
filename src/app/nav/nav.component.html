@@ -1,11 +1,9 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <a mat-button (click)="select('')">
-      NewsFlash - {{sCategoryTitle}}
-    </a>
+      <span class="logo">NewsFlash</span>
   </mat-toolbar-row>
   <mat-toolbar-row>
-    <button mat-button *ngFor="let item of categories" (click)="select(item.value)">
+    <button mat-button *ngFor="let item of categories" routerLink="/{{item.value}}" routerLinkActive="active">
       {{item.title}}&nbsp;
       <mat-icon>{{item.icon}}</mat-icon>
     </button>

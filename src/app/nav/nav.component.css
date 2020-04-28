@@ -2,10 +2,10 @@
   margin-right: 16px;
 }
 
-a[mat-button] {
+.logo {
   font-size: xx-large;
 }
 
 .active {
-  margin: 100dp;
+  color: #F06292;
 }

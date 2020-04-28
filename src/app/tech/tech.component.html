@@ -1,10 +1,12 @@
-<mat-card webOnHover="8">
-    <mat-card-content>
-        <img *ngIf="tech.img" [src]="tech.img" alt="kep">
-        <div class="dashboard-text">
-            <mat-card-title>{{tech.title}}</mat-card-title>
-            <span>{{tech.subtitle}}</span>
-        </div>
-    </mat-card-content>
-</mat-card>
-<br>
+<div class="container" *ngFor="let techitem of techlist">
+    <mat-card webOnHover="8">
+        <mat-card-content>
+            <img *ngIf="techitem.img" [src]="techitem.img" alt="kep">
+            <div class="dashboard-text">
+                <mat-card-title>{{techitem.title}}</mat-card-title>
+                <span>{{techitem.subtitle}}</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+    <br>
+</div>

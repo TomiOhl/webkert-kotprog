@@ -11,4 +11,10 @@ export class DetailsComponent {
   @Input() inData: Movie | Game;
   @Output() callSelectPage = new EventEmitter<string>();
   constructor() { }
+
+  onSelectCikk(event: string) {
+    // router redirect this.page = event;
+    alert('selected:' + event);
+  }
+
 }

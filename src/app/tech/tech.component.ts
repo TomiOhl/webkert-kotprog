@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Techitem } from './techitem';
+import { Component, OnInit } from '@angular/core';
+import { TECHLIST } from './techlist';
 
 @Component({
   selector: 'web-tech',
@@ -8,7 +8,7 @@ import { Techitem } from './techitem';
 })
 export class TechComponent implements OnInit {
 
-  @Input() tech: Techitem;
+  techlist = TECHLIST;
 
   constructor() { }
 

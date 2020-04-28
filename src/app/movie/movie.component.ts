@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from './movie';
+import { MOVIES } from './movies';
 
 @Component({
   selector: 'web-movie',
@@ -8,19 +9,18 @@ import { Movie } from './movie';
 })
 export class MovieComponent implements OnInit {
   @Input() hasAction = true;
-  @Input() movie: Movie;
-  @Output() callFav = new EventEmitter<Movie | null>();
   @Output() getMovie = new EventEmitter<Movie>();
+  movies = MOVIES;
+  detailData: any;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleStar(event: any) {
-    event.stopPropagation();
-    this.movie.star = !this.movie.star;
-    this.callFav.emit(this.movie);
+  goToDetails(event: Movie ) {
+    this.detailData = event;
+    // router redirect this.page = 'details';
   }
 
 }

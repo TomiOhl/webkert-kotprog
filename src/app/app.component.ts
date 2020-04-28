@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CATEGORIES } from './category/categories';
 
 @Component({
   selector: 'web-root',
@@ -6,4 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  categories = CATEGORIES;
+
+  constructor() { }
+
 }
