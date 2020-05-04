@@ -1,15 +1,9 @@
 <div (callSelectCikk)="onSelectCikk($event)">
   <mat-card class="det-img" [style.backgroundImage]="'url(' + inData.img + ')'">
-    <div style="display: flex;">
-      <span style="flex: 1 1;"></span>
-      <button mat-button (click)="callSelectPage.emit('home')">
-        <mat-icon>close</mat-icon>
-      </button>
-    </div>
     <span style="flex: 1 1;"></span>
     <div class="det-title">
       <h1>{{inData.title}}</h1>
-      <p>{{inData.description}}</p>
+      <p>{{inData.subtitle}}</p>
     </div>
   </mat-card>
   <mat-tab-group>

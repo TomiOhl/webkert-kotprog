@@ -4,31 +4,25 @@ export const CATEGORIES: Category[] = [
     {
         title: 'Felkapott',
         icon: 'whatshot',
-        value: 'movie',
+        value: '',
         color: 'teal'
-    },
-    {
-        title: 'Világ',
-        icon: 'public',
-        value: 'game',
-        color: 'cyan'
     },
     {
         title: 'Autók',
         icon: 'time_to_leave',
-        value: 'favorite',
-        color: '#c2185b'
+        value: 'cars',
+        color: '#teal'
     },
     {
         title: 'Tech',
         icon: 'devices',
         value: 'tech',
-        color: '#c2185b'
+        color: '#teal'
     },
     {
         title: 'NSFW',
         icon: 'sentiment_satisfied_alt',
         value: 'nsfw',
-        color: '#c2185b'
+        color: '#teal'
     }
 ];

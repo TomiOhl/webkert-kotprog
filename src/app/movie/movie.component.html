@@ -1,14 +1,13 @@
 <div class="container" *ngFor="let movie of movies" (getMovie)="goToDetails($event)">
   <mat-card webOnHover="8" (click)="getMovie.emit(movie)">
     <mat-card-header>
-      <mat-card-title>{{movie.title}}<small *ngIf="movie.lengthMin">({{movie.lengthMin}}p)</small>
-        <div [style.backgroundColor]="movie.imdb > 18 ? '#ff0000': '#00ff00'" class="agerestrict">{{movie.imdb}}</div>
+      <mat-card-title>{{movie.title}}
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <img *ngIf="movie.img" [src]="movie.img" alt="borito">
+      <img *ngIf="movie.img" [src]="movie.img" alt="Kép">
       <div class="dashboard-text">
-        <span>{{movie.description}}</span>
+        <span>{{movie.subtitle}}</span>
       </div>
     </mat-card-content>
   </mat-card>

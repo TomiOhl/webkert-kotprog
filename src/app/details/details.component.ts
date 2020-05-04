@@ -1,6 +1,7 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 import { Movie } from '../movie/movie';
-import { Game } from '../game/game';
+import { Car } from '../cars/car';
+import { Techitem } from '../tech/techitem';
 
 @Component({
   selector: 'web-details',
@@ -8,7 +9,7 @@ import { Game } from '../game/game';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-  @Input() inData: Movie | Game;
+  @Input() inData: Movie | Car | Techitem;
   @Output() callSelectPage = new EventEmitter<string>();
   constructor() { }
 

@@ -9,7 +9,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class GameAddComponent implements OnInit {
   form: FormGroup;
-  constructor(private dialogRef: MatDialogRef<GameAddComponent>) { }
+  constructor(protected dialogRef: MatDialogRef<GameAddComponent>) { }
 
   ngOnInit() {
     this.resetForm();
@@ -17,9 +17,8 @@ export class GameAddComponent implements OnInit {
 
   resetForm() {
     this.form = new FormGroup({
-      id: new FormControl(),
       title: new FormControl(''),
-      description: new FormControl('')
+      subtitle: new FormControl('')
     });
   }
 

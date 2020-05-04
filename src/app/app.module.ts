@@ -15,11 +15,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
 import { NavComponent } from './nav/nav.component';
 import { MatRippleModule } from '@angular/material/core';
-import { GameComponent } from './game/game.component';
 import { DetailsComponent } from './details/details.component';
-import { GameAddComponent } from './game/add/game-add.component';
+import { GameAddComponent } from './cars/add/game-add.component';
 import { OnHoverDirective } from './directives/on-hover.directive';
 import { TechComponent } from './tech/tech.component';
+import { CarsComponent } from './cars/cars.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { TechComponent } from './tech/tech.component';
     OnHoverDirective,
     MovieComponent,
     NavComponent,
-    GameComponent,
+    CarsComponent,
     DetailsComponent,
     GameAddComponent,
     TechComponent

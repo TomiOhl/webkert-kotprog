@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
-import { GAMES } from './games';
+import { CARS } from './cars';
 import { GameAddComponent } from './add/game-add.component';
 import { MatDialog } from '@angular/material/dialog';
 
 
 @Component({
-  selector: 'web-game',
-  templateUrl: './game.component.html',
-  styleUrls: ['./game.component.css']
+  selector: 'web-car',
+  templateUrl: './cars.component.html',
+  styleUrls: ['./cars.component.css']
 })
-export class GameComponent {
-  games = GAMES;
+export class CarsComponent {
+  cars = CARS;
 
   constructor(private dialog: MatDialog) { }
 
@@ -19,7 +19,7 @@ export class GameComponent {
     const dialogRef = this.dialog.open(GameAddComponent, {});
     dialogRef.afterClosed().subscribe(result => {
       if (result && result.title) {
-        this.games.push(result);
+        this.cars.push(result);
       }
     });
   }

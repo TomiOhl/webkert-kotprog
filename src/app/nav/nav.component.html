@@ -3,7 +3,8 @@
       <span class="logo">NewsFlash</span>
   </mat-toolbar-row>
   <mat-toolbar-row>
-    <button mat-button *ngFor="let item of categories" routerLink="/{{item.value}}" routerLinkActive="active">
+    <button mat-button *ngFor="let item of categories" 
+            routerLink="/{{item.value}}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
       {{item.title}}&nbsp;
       <mat-icon>{{item.icon}}</mat-icon>
     </button>
