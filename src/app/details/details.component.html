@@ -1,4 +1,4 @@
-<div (callSelectCikk)="onSelectCikk($event)">
+<div>
   <mat-card class="det-img" [style.backgroundImage]="'url(' + inData.img + ')'">
     <span style="flex: 1 1;"></span>
     <div class="det-title">
@@ -7,7 +7,10 @@
     </div>
   </mat-card>
   <mat-tab-group>
-    <mat-tab label="Áttekintés">
+    <mat-tab label="Tartalom">
+      <mat-card>
+          {{inData.content}}
+      </mat-card>
     </mat-tab>
     <mat-tab label="Megjegyzések">
       <mat-card class="no-box transparent">

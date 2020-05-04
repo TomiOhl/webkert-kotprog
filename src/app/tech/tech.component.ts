@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 import { TECHLIST } from './techlist';
+import { SelectCikkService } from '../services/select-cikk.service';
+import { Techitem } from './techitem';
 
 @Component({
   selector: 'web-tech',
@@ -10,9 +13,14 @@ export class TechComponent implements OnInit {
 
   techlist = TECHLIST;
 
-  constructor() { }
+  constructor(private router: Router, private selectCikkService: SelectCikkService) { }
 
   ngOnInit() {
+  }
+
+  goToDetails(cikk: Techitem ) {
+    this.selectCikkService.selectedItem = cikk;
+    this.router.navigate(['/cikk']);
   }
 
 }

@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
 import { CARS } from './cars';
 import { GameAddComponent } from './add/game-add.component';
 import { MatDialog } from '@angular/material/dialog';
+import { SelectCikkService } from '../services/select-cikk.service';
+import { Car } from './car';
 
 
 @Component({
@@ -12,8 +15,7 @@ import { MatDialog } from '@angular/material/dialog';
 export class CarsComponent {
   cars = CARS;
 
-  constructor(private dialog: MatDialog) { }
-
+  constructor(private dialog: MatDialog, private router: Router, private selectCikkService: SelectCikkService) { }
 
   openDialog() {
     const dialogRef = this.dialog.open(GameAddComponent, {});
@@ -22,6 +24,11 @@ export class CarsComponent {
         this.cars.push(result);
       }
     });
+  }
+
+  goToDetails(cikk: Car ) {
+    this.selectCikkService.selectedItem = cikk;
+    this.router.navigate(['/cikk']);
   }
 
 }

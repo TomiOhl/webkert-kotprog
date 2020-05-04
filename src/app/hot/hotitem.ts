@@ -1,4 +1,4 @@
-export interface Movie {
+export interface HotItem {
     title: string;
     subtitle: string;
     img?: string;

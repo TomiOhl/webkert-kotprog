@@ -11,18 +11,18 @@ export const CATEGORIES: Category[] = [
         title: 'Autók',
         icon: 'time_to_leave',
         value: 'cars',
-        color: '#teal'
+        color: 'teal'
     },
     {
         title: 'Tech',
         icon: 'devices',
         value: 'tech',
-        color: '#teal'
+        color: 'teal'
     },
     {
         title: 'NSFW',
         icon: 'sentiment_satisfied_alt',
         value: 'nsfw',
-        color: '#teal'
+        color: 'teal'
     }
 ];

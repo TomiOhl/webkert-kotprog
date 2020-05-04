@@ -1,10 +1,10 @@
 <div class="container" *ngFor="let car of cars">
-    <mat-card webOnHover="8">
+    <mat-card webOnHover="8" (click)="goToDetails(car)">
         <mat-card-content>
             <img *ngIf="car.img" [src]="car.img" alt="Kép">
             <div class="dashboard-text">
                 <mat-card-title>{{car.title}}</mat-card-title>
-                <div>{{car.subtitle}}</div>
+                <span>{{car.subtitle}}</span>
             </div>
         </mat-card-content>
     </mat-card>

@@ -1,6 +1,6 @@
-import { Movie } from './movie';
+import { HotItem } from './hotitem';
 
-export const MOVIES: Movie[] = [
+export const HOTLIST: HotItem[] = [
     {
         title: 'Avengers: Endgame',
         subtitle: 'Thanos',

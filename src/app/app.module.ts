@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MovieComponent } from './movie/movie.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -20,12 +19,13 @@ import { GameAddComponent } from './cars/add/game-add.component';
 import { OnHoverDirective } from './directives/on-hover.directive';
 import { TechComponent } from './tech/tech.component';
 import { CarsComponent } from './cars/cars.component';
+import { HotComponent } from './hot/hot.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OnHoverDirective,
-    MovieComponent,
+    HotComponent,
     NavComponent,
     CarsComponent,
     DetailsComponent,

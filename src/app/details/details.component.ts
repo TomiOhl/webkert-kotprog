@@ -1,7 +1,9 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
-import { Movie } from '../movie/movie';
+import {Router} from '@angular/router';
+import { HotItem } from '../hot/hotitem';
 import { Car } from '../cars/car';
 import { Techitem } from '../tech/techitem';
+import { SelectCikkService } from '../services/select-cikk.service';
 
 @Component({
   selector: 'web-details',
@@ -9,13 +11,10 @@ import { Techitem } from '../tech/techitem';
   styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
-  @Input() inData: Movie | Car | Techitem;
-  @Output() callSelectPage = new EventEmitter<string>();
-  constructor() { }
+  inData: Car | HotItem | Techitem;
 
-  onSelectCikk(event: string) {
-    // router redirect this.page = event;
-    alert('selected:' + event);
+  constructor(private router: Router, private selectCikkService: SelectCikkService) {
+    this.inData = this.selectCikkService.selectedItem;
   }
 
 }

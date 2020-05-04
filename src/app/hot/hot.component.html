@@ -1,0 +1,13 @@
+<div class="container" *ngFor="let hot of hotlist">
+    <mat-card webOnHover="8" (click)="goToDetails(hot)">
+        <mat-card-header>
+            <mat-card-title>{{hot.title}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <img *ngIf="hot.img" [src]="hot.img" alt="Kép">
+            <div class="dashboard-text">
+                <span>{{hot.subtitle}}</span>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

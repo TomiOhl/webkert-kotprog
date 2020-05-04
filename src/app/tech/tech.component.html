@@ -1,5 +1,5 @@
 <div class="container" *ngFor="let techitem of techlist">
-    <mat-card webOnHover="8">
+    <mat-card webOnHover="8" (click)="goToDetails(techitem)">
         <mat-card-content>
             <img *ngIf="techitem.img" [src]="techitem.img" alt="kep">
             <div class="dashboard-text">
