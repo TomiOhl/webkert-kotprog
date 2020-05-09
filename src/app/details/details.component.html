@@ -12,19 +12,19 @@
           {{inData.content}}
       </mat-card>
     </mat-tab>
-    <mat-tab label="Megjegyzések">
+    <mat-tab label="Hozzászólások">
       <mat-card class="no-box transparent">
         <form>
           <mat-form-field class="max-width">
-            <mat-label>Megjegyzés írása</mat-label>
-            <textarea matInput placeholder="Pl. Jajj de jó film..." cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
+            <mat-label>Hozzászólás írása</mat-label>
+            <textarea matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
           </mat-form-field>
           <div style="display: flex; justify-content: flex-end;">
             <button mat-button type="reset" class="margin-right">
-              MÉGSEM
+              MÉGSE
             </button>
             <button mat-raised-button type="submit" color="primary">
-              MEGJEGYZÉS
+              HOZZÁSZÓLÁS
             </button>
           </div>
         </form>
