@@ -10,7 +10,6 @@ import { SelectCikkService } from '../services/select-cikk.service';
   styleUrls: ['./hot.component.css']
 })
 export class HotComponent implements OnInit {
-  @Input() hasAction = true;
   hotlist = HOTLIST;
 
   constructor(private router: Router, private selectCikkService: SelectCikkService) { }
