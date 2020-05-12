@@ -1,34 +1,37 @@
-<div>
-  <mat-card class="det-img" [style.backgroundImage]="'url(' + inData.img + ')'">
-    <span style="flex: 1 1;"></span>
-    <div class="det-title">
-      <h1>{{inData.title}}</h1>
-      <p>{{inData.subtitle}}</p>
-    </div>
-  </mat-card>
-  <mat-tab-group>
-    <mat-tab label="Tartalom">
-      <mat-card>
-          {{inData.content}}
-      </mat-card>
-    </mat-tab>
-    <mat-tab label="Hozzászólások">
-      <mat-card class="no-box transparent">
+<div class="container">
+
+    <mat-card class="detailscontent">
+        <div class="cikk no-box transparent">
+            <h1>{{inData.title}}</h1>
+            <p><b>{{inData.subtitle}}</b></p>
+            <p>{{inData.content}}</p>
+        </div>
+    </mat-card>
+    <img src={{inData.img}} class="det-img" alt="Fotó"/>
+    <br>
+
+    <mat-card class="comment">
         <form>
-          <mat-form-field class="max-width">
+        <mat-form-field class="max-width">
             <mat-label>Hozzászólás írása</mat-label>
             <textarea matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
-          </mat-form-field>
-          <div style="display: flex; justify-content: flex-end;">
+        </mat-form-field>
+        <div style="display: flex; justify-content: flex-end;">
             <button mat-button type="reset" class="margin-right">
-              MÉGSE
+                MÉGSE
             </button>
             <button mat-raised-button type="submit" color="primary">
-              HOZZÁSZÓLÁS
+                HOZZÁSZÓLÁS
             </button>
-          </div>
+        </div>
         </form>
-      </mat-card>
-    </mat-tab>
-  </mat-tab-group>
+    </mat-card>
+
+    <h3>Hozzászólások</h3>
+
+    <mat-card class="comment" webOnHover="6">
+        <b>Szerző</b>
+        <p>Szöveg</p>
+    </mat-card>
+
 </div>
