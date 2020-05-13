@@ -8,8 +8,12 @@ import { COMMENTS } from '../comments/comments';
 })
 export class RecentcommentsComponent implements OnInit {
 comments = COMMENTS;
+orderedcomments = [];
 
-  constructor() { }
+  constructor() {
+    this.comments.forEach(val => this.orderedcomments.push(Object.assign({}, val)));
+    this.orderedcomments = this.orderedcomments.reverse().slice(0, 5);
+  }
 
   ngOnInit() {
   }

@@ -4,7 +4,7 @@
     </mat-card-header>
     <mat-card-content>
         <ul>
-            <li *ngFor="let item of comments.reverse().slice(0, 5)">
+            <li *ngFor="let item of orderedcomments">
                 {{item.cikk}}<br>
                 <i>szerző: {{item.user}}</i><br>
                 <span style="padding-left:1em">{{item.content}}</span><br><hr>

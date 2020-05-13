@@ -34,7 +34,7 @@
 
     <h3>Hozzászólások</h3>
 
-    <div *ngFor="let comment of comments.reverse()" >
+    <div *ngFor="let comment of orderedcomments">
         <mat-card class="comment" webOnHover="6" *ngIf="(comment.cikk === inData.title)">
             <b>{{comment.user}}</b>
             <p>{{comment.content}}</p>
