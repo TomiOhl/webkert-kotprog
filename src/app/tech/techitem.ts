@@ -3,4 +3,5 @@ export interface Techitem {
     subtitle: string;
     img?: string;
     content?: string;
+    views?: number;
 }

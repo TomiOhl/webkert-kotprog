@@ -4,21 +4,25 @@ export const CARS: Car[] = [
     {
         title: 'Tesla Model S',
         subtitle: 'The Best Sedan Of The World',
-        img: 'https://wallpaperaccess.com/full/486595.jpg'
+        img: 'https://wallpaperaccess.com/full/486595.jpg',
+        views: 2000
     },
     {
         title: 'Tesla Model 3',
         subtitle: 'The Best Mid-Size Sedan Of The World',
-        img: 'https://a-static.besthdwallpaper.com/piros-auto-tesla-model-3-tapeta-3840x2160-9639_54.jpg'
+        img: 'https://a-static.besthdwallpaper.com/piros-auto-tesla-model-3-tapeta-3840x2160-9639_54.jpg',
+        views: 1500
     },
     {
         title: 'Tesla Model X',
         subtitle: 'The Best SUV Of The World',
-        img: 'https://images.hdqwalls.com/download/tesla-model-x-vi-1920x1080.jpg'
+        img: 'https://images.hdqwalls.com/download/tesla-model-x-vi-1920x1080.jpg',
+        views: 1750
     },
     {
         title: 'Tesla Model Y',
         subtitle: 'The Best Compact SUV Of The World',
-        img: 'https://wallpaperaccess.com/full/2257164.jpg'
+        img: 'https://wallpaperaccess.com/full/2257164.jpg',
+        views: 500
     }
 ];

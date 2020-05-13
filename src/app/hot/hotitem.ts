@@ -3,5 +3,6 @@ export interface HotItem {
     subtitle: string;
     img?: string;
     content?: string;
+    views?: number;
 }
 

@@ -17,6 +17,7 @@ export const HOTLIST: HotItem[] = [
         hogy ezekben az időkben különösen fontos a pozitív hozzáállás, és, hogy nekünk tetsző, pozitív hangvételű témákkal,
         tartalmakkal is foglalkozzunk, amelyek kiszakítanak a járvány és annak gazdasági hatásai által keltett pánikhangulatból.
         (forrás: pcworld.hu)`,
+        views: 5000
     },
     {
         title: 'Pénteken egyetlen új fertőzöttet sem találtak Szlovákiában',
@@ -30,6 +31,7 @@ export const HOTLIST: HotItem[] = [
         Azt is hozzátette azért, hogy:
         “a Covid-19 elleni háborút még korántsem nyertük meg, de ha az emberek fegyelmezettek lesznek, sikeresek lehetünk.”
         (forrás: ujszo.com, 444.hu)`,
+        views: 1000
     },
     {
         title: 'Büntetés vagy lehetőség a nyári iskola?',
@@ -55,6 +57,7 @@ export const HOTLIST: HotItem[] = [
         A nyári szünet alatti tanításról már Branislav Gröhling (SaS) oktatási miniszter is beszélt.
         Elmondta, önkéntes alapon működne, és nem a megszokott módszerekkel folyna az oktatás.
         (forrás: ujszo.com)`,
+        views: 500
     },
     {
         title: 'Itt az első villanyautó, amelynek akkumulátorára tíz év garanciát adnak',
@@ -67,5 +70,6 @@ export const HOTLIST: HotItem[] = [
         amely a WLTP norma szerint több mint 300 kilométeres hatótávolságot tesz lehetővé.
         A 288 cellából álló lítium-ion akkumulátorcsomag az utastér padlója, illetve a hátsó ülések alatt helyezkedik el.
         (forrás: origo.hu)`,
+        views: 1122
     }
 ];

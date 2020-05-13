@@ -3,4 +3,5 @@ export interface Car {
     subtitle: string;
     img?: string;
     content?: string;
+    views?: number;
 }
