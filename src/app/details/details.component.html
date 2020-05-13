@@ -1,12 +1,11 @@
 <div class="container">
 
-    <mat-card class="detailscontent">
-        <div class="cikk no-box transparent">
-            <h1>{{inData.title}}</h1>
-            <p><b>{{inData.subtitle}}</b></p>
-            <p>{{inData.content}}</p>
-        </div>
-    </mat-card>
+    
+    <div class="detailscontent no-box transparent">
+        <h1>{{inData.title}}</h1>
+        <p><b>{{inData.subtitle}}</b></p>
+        <p>{{inData.content}}</p>
+    </div>
     <img src={{inData.img}} class="det-img" alt="Fotó"/>
     <img src="https://fhlreview.com/wp-content/uploads/2017/08/place-your-ad-here-ppc-pay-per-click.png" class="det-img" alt="Hirdetés"/>
     <br>
@@ -14,13 +13,13 @@
     <mat-card class="comment">
         <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
             <mat-form-field class="max-width">
+                <mat-label>Hozzászólás írása</mat-label>
+                <textarea formControlName="content" matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="3"></textarea>
+            </mat-form-field>
+            <mat-form-field class="max-width">
                 <mat-label>Felhasználónév</mat-label>
                 <input formControlName="user" type="text" matInput
                 placeholder="Írjon ide egy nevet, ami meg fog jelenni a hozzászólásán" />
-            </mat-form-field>
-            <mat-form-field class="max-width">
-                <mat-label>Hozzászólás írása</mat-label>
-                <textarea formControlName="content" matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
             </mat-form-field>
             <div style="display: flex; justify-content: flex-end;">
                 <button mat-button type="reset" class="margin-right">

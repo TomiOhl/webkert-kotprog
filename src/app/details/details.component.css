@@ -7,6 +7,9 @@
     width: 60%;
     max-width: 68%;
 }
+.detailscontent h1 {
+    text-align: center;
+}
 .det-img {
     vertical-align: top;
     float: right;
