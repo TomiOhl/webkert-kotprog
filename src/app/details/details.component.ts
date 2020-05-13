@@ -1,9 +1,11 @@
-import { Component, Output, EventEmitter, Input } from '@angular/core';
-import {Router} from '@angular/router';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 import { HotItem } from '../hot/hotitem';
 import { Car } from '../cars/car';
 import { Techitem } from '../tech/techitem';
 import { SelectCikkService } from '../services/select-cikk.service';
+import { COMMENTS } from '../comments/comments';
 
 @Component({
   selector: 'web-details',
@@ -12,9 +14,27 @@ import { SelectCikkService } from '../services/select-cikk.service';
 })
 export class DetailsComponent {
   inData: Car | HotItem | Techitem;
+  comments = COMMENTS;
+  form;
 
   constructor(private router: Router, private selectCikkService: SelectCikkService) {
     this.inData = this.selectCikkService.selectedItem;
+
+    this.initForm();
   }
+
+  initForm() {
+    this.form = new FormGroup({
+      cikk: new FormControl(this.inData.title),
+      user: new FormControl(''),
+      content: new FormControl('')
+  });
+  }
+
+  onSubmit(newComment) {
+    COMMENTS.push(newComment);
+    this.form.reset();
+    this.initForm();
+}
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { TECHLIST } from './techlist';
 import { SelectCikkService } from '../services/select-cikk.service';
 import { Techitem } from './techitem';

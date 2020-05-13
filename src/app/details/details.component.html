@@ -11,27 +11,34 @@
     <br>
 
     <mat-card class="comment">
-        <form>
-        <mat-form-field class="max-width">
-            <mat-label>Hozzászólás írása</mat-label>
-            <textarea matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
-        </mat-form-field>
-        <div style="display: flex; justify-content: flex-end;">
-            <button mat-button type="reset" class="margin-right">
-                MÉGSE
-            </button>
-            <button mat-raised-button type="submit" color="primary">
-                HOZZÁSZÓLÁS
-            </button>
-        </div>
+        <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+            <mat-form-field class="max-width">
+                <mat-label>Felhasználónév</mat-label>
+                <input formControlName="user" type="text" matInput
+                placeholder="Írjon ide egy nevet, ami meg fog jelenni a hozzászólásán" />
+            </mat-form-field>
+            <mat-form-field class="max-width">
+                <mat-label>Hozzászólás írása</mat-label>
+                <textarea formControlName="content" matInput placeholder="Ide írja hozzáfűznivalóját" cdkTextareaAutosize cdkAutosizeMinRows="4"></textarea>
+            </mat-form-field>
+            <div style="display: flex; justify-content: flex-end;">
+                <button mat-button type="reset" class="margin-right">
+                    MÉGSE
+                </button>
+                <button mat-raised-button type="submit" color="primary">
+                    HOZZÁSZÓLÁS
+                </button>
+            </div>
         </form>
     </mat-card>
 
     <h3>Hozzászólások</h3>
 
-    <mat-card class="comment" webOnHover="6">
-        <b>Szerző</b>
-        <p>Szöveg</p>
-    </mat-card>
+    <div *ngFor="let comment of comments.reverse()" >
+        <mat-card class="comment" webOnHover="6" *ngIf="(comment.cikk === inData.title)">
+            <b>{{comment.user}}</b>
+            <p>{{comment.content}}</p>
+        </mat-card>
+    </div>
 
 </div>

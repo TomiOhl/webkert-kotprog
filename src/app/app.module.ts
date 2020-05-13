@@ -15,7 +15,6 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { NavComponent } from './nav/nav.component';
 import { MatRippleModule } from '@angular/material/core';
 import { DetailsComponent } from './details/details.component';
-import { GameAddComponent } from './cars/add/game-add.component';
 import { OnHoverDirective } from './directives/on-hover.directive';
 import { TechComponent } from './tech/tech.component';
 import { CarsComponent } from './cars/cars.component';
@@ -29,7 +28,6 @@ import { HotComponent } from './hot/hot.component';
     NavComponent,
     CarsComponent,
     DetailsComponent,
-    GameAddComponent,
     TechComponent
   ],
   imports: [
@@ -49,7 +47,7 @@ import { HotComponent } from './hot/hot.component';
     MatDialogModule
   ],
   entryComponents: [
-    GameAddComponent
+
   ],
   providers: [],
   bootstrap: [AppComponent]

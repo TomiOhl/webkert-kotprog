@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { HotItem } from './hotitem';
 import { HOTLIST } from './hotlist';
 import { SelectCikkService } from '../services/select-cikk.service';
