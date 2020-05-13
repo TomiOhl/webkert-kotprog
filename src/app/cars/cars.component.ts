@@ -16,7 +16,7 @@ export class CarsComponent {
   constructor(private router: Router, private selectCikkService: SelectCikkService) { }
 
   goToDetails(cikk: Car ) {
-    this.selectCikkService.selectedItem = cikk;
+    this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
   }
 

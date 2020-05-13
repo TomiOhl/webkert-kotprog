@@ -19,7 +19,7 @@ export class TechComponent implements OnInit {
   }
 
   goToDetails(cikk: Techitem ) {
-    this.selectCikkService.selectedItem = cikk;
+    this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
   }
 

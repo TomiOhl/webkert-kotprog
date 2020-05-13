@@ -18,7 +18,7 @@ export class HotComponent implements OnInit {
   }
 
   goToDetails(cikk: HotItem ) {
-    this.selectCikkService.selectedItem = cikk;
+    this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
   }
 

@@ -2,6 +2,11 @@ import { CommentItem } from './commentitem';
 
 export const COMMENTS: CommentItem[] = [
     {
+        cikk: 'Első cikk',
+        user: 'Tomi_Ohl',
+        content: 'És itt egy komment lol'
+    },
+    {
         cikk: 'Tesla Model S',
         user: 'Tomi_Ohl',
         content: 'Ez így van'
@@ -20,10 +25,5 @@ export const COMMENTS: CommentItem[] = [
         cikk: 'Egyre több embernek kellenének most jó hírek',
         user: 'i5tarcsa',
         content: 'Pontosan!'
-    },
-    {
-        cikk: 'Első cikk',
-        user: 'Tomi_Ohl',
-        content: 'És itt egy komment lol'
     },
 ];

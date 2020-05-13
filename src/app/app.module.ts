@@ -20,6 +20,7 @@ import { TechComponent } from './tech/tech.component';
 import { CarsComponent } from './cars/cars.component';
 import { HotComponent } from './hot/hot.component';
 import { PopularlistComponent } from './popularlist/popularlist.component';
+import { RecentcommentsComponent } from './recentcomments/recentcomments.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PopularlistComponent } from './popularlist/popularlist.component';
     CarsComponent,
     DetailsComponent,
     TechComponent,
-    PopularlistComponent
+    PopularlistComponent,
+    RecentcommentsComponent
   ],
   imports: [
     BrowserModule,

@@ -15,11 +15,10 @@ import { COMMENTS } from '../comments/comments';
 export class DetailsComponent {
   inData: Car | HotItem | Techitem;
   comments = COMMENTS;
-  form;
+  form: FormGroup;
 
   constructor(private router: Router, private selectCikkService: SelectCikkService) {
-    this.inData = this.selectCikkService.selectedItem;
-
+    this.inData = this.selectCikkService.getSelectedItem();
     this.initForm();
   }
 
@@ -28,13 +27,13 @@ export class DetailsComponent {
       cikk: new FormControl(this.inData.title),
       user: new FormControl(''),
       content: new FormControl('')
-  });
+    });
   }
 
   onSubmit(newComment) {
     COMMENTS.push(newComment);
     this.form.reset();
     this.initForm();
-}
+  }
 
 }

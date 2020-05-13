@@ -7,9 +7,19 @@ import { Techitem } from '../tech/techitem';
   providedIn: 'root'
 })
 export class SelectCikkService {
-  selectedItem: Car | HotItem | Techitem;
+  private selectedItem: Car | HotItem | Techitem;
 
   constructor() {
-
+    this.selectedItem = JSON.parse(localStorage.getItem('selectedItem'));
   }
+
+  public getSelectedItem() {
+    return this.selectedItem;
+  }
+
+  public setSelectedItem(cikk: Car | HotItem | Techitem) {
+    this.selectedItem = cikk;
+    localStorage.setItem('selectedItem', JSON.stringify(cikk));
+  }
+
 }
