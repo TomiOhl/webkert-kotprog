@@ -1,8 +1,6 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding: 16px;
+    max-width: 72%;
+    padding: 8px 16px 0px 16px;
 }
 mat-card {
     padding: 0px;
@@ -23,9 +21,3 @@ img {
     display: inline-block;
     margin: 16px;
 }
-
-.action-btn {
-    position: fixed;
-    bottom: 16px;
-    right: 16px;
-  }
