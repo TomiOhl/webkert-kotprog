@@ -32,3 +32,8 @@ body {
   justify-content: center;
   height: stretch;
 }
+
+.simple-snack-bar .mat-simple-snackbar {
+  justify-content: center;
+  text-align: center;
+}

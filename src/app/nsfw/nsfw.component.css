@@ -1,0 +1,14 @@
+.ageconfirm {
+    color: #f44336;
+    display: table;
+    margin: auto;
+    text-align: center;
+    padding: 16px;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+}
+img {
+    filter: blur(8px);
+    max-width: 72%;
+}

@@ -2,13 +2,13 @@
     <mat-card-header>
     <b>Legújabb hozzászólások</b>
     </mat-card-header>
-    <mat-dialog-content>
+    <mat-card-content>
         <ul>
             <li *ngFor="let item of comments.reverse().slice(0, 5)">
                 {{item.cikk}}<br>
                 <i>szerző: {{item.user}}</i><br>
-                {{item.content}}<br><hr>
+                <span style="padding-left:1em">{{item.content}}</span><br><hr>
             </li>
         </ul>
-    </mat-dialog-content>
+    </mat-card-content>
 </mat-card>

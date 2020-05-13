@@ -8,10 +8,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { NavComponent } from './nav/nav.component';
 import { MatRippleModule } from '@angular/material/core';
 import { DetailsComponent } from './details/details.component';
@@ -21,6 +19,7 @@ import { CarsComponent } from './cars/cars.component';
 import { HotComponent } from './hot/hot.component';
 import { PopularlistComponent } from './popularlist/popularlist.component';
 import { RecentcommentsComponent } from './recentcomments/recentcomments.component';
+import { NsfwComponent } from './nsfw/nsfw.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,8 @@ import { RecentcommentsComponent } from './recentcomments/recentcomments.compone
     DetailsComponent,
     TechComponent,
     PopularlistComponent,
-    RecentcommentsComponent
+    RecentcommentsComponent,
+    NsfwComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +46,7 @@ import { RecentcommentsComponent } from './recentcomments/recentcomments.compone
     MatCardModule,
     MatRippleModule,
     MatInputModule,
-    MatTabsModule,
-    MatMenuModule,
-    MatDialogModule
+    MatSnackBarModule
   ],
   entryComponents: [
 
