@@ -6,7 +6,8 @@
 }
 mat-card {
   padding: 0px;
-  width: 75%;
+  padding-top: 8px;
+  width: 95%;
   margin: 4px;
   cursor: pointer;
 }

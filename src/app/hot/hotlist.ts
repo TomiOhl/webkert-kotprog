@@ -31,7 +31,7 @@ export const HOTLIST: HotItem[] = [
         Azt is hozzátette azért, hogy:
         “a Covid-19 elleni háborút még korántsem nyertük meg, de ha az emberek fegyelmezettek lesznek, sikeresek lehetünk.”
         (forrás: ujszo.com, 444.hu)`,
-        views: 1000
+        views: 1200
     },
     {
         title: 'Büntetés vagy lehetőség a nyári iskola?',

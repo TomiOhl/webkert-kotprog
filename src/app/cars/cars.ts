@@ -5,7 +5,7 @@ export const CARS: Car[] = [
         title: 'Tesla Model S',
         subtitle: 'The Best Sedan Of The World',
         img: 'https://wallpaperaccess.com/full/486595.jpg',
-        views: 2000
+        views: 1100
     },
     {
         title: 'Tesla Model 3',
@@ -17,7 +17,7 @@ export const CARS: Car[] = [
         title: 'Tesla Model X',
         subtitle: 'The Best SUV Of The World',
         img: 'https://images.hdqwalls.com/download/tesla-model-x-vi-1920x1080.jpg',
-        views: 1750
+        views: 1001
     },
     {
         title: 'Tesla Model Y',

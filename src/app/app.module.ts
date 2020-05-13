@@ -19,6 +19,7 @@ import { OnHoverDirective } from './directives/on-hover.directive';
 import { TechComponent } from './tech/tech.component';
 import { CarsComponent } from './cars/cars.component';
 import { HotComponent } from './hot/hot.component';
+import { PopularlistComponent } from './popularlist/popularlist.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HotComponent } from './hot/hot.component';
     NavComponent,
     CarsComponent,
     DetailsComponent,
-    TechComponent
+    TechComponent,
+    PopularlistComponent
   ],
   imports: [
     BrowserModule,
