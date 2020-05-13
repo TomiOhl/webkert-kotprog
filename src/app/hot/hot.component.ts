@@ -20,6 +20,12 @@ export class HotComponent implements OnInit {
   goToDetails(cikk: HotItem ) {
     this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
+    for (const elem of this.hotlist) {
+      if (elem === cikk) {
+          elem.views++;
+          break;
+      }
+    }
   }
 
 }

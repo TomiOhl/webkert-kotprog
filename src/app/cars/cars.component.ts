@@ -18,6 +18,12 @@ export class CarsComponent {
   goToDetails(cikk: Car ) {
     this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
+    for (const elem of this.cars) {
+      if (elem === cikk) {
+          elem.views++;
+          break;
+      }
+    }
   }
 
 }

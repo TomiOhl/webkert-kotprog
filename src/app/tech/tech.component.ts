@@ -21,6 +21,12 @@ export class TechComponent implements OnInit {
   goToDetails(cikk: Techitem ) {
     this.selectCikkService.setSelectedItem(cikk);
     this.router.navigate(['/cikk']);
+    for (const elem of this.techlist) {
+      if (elem === cikk) {
+          elem.views++;
+          break;
+      }
+    }
   }
 
 }
